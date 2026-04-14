@@ -1,0 +1,175 @@
+---
+title: "Building FocusGuard – A Smart Chrome Extension to Reduce Distractions"
+summary: "How I built a browser-based system that helps users stay focused by controlling distracting websites and tracking behavior patterns."
+publishedAt: "2026-04-14"
+tag: "Engineering"
+---
+
+## Introduction
+
+One problem I noticed while working on projects is very simple.
+
+We get distracted easily.
+
+Open YouTube for 5 minutes…  
+scroll Instagram…  
+and suddenly 1 hour is gone.
+
+There are many website blockers, but most of them are too strict or too basic.
+
+So I decided to build something better.
+
+---
+
+## The Problem
+
+Most productivity tools work like this:
+
+- block website → done  
+
+But real life is not like that.
+
+Sometimes:
+- we need a short break  
+- we open sites repeatedly  
+- we lose track of time  
+
+There is no system that actually understands user behavior.
+
+---
+
+## The Idea
+
+I wanted to build a system that:
+
+- helps users stay focused  
+- allows controlled flexibility  
+- tracks behavior instead of just blocking  
+
+That’s how **FocusGuard** was created.
+
+---
+
+## How It Works
+
+FocusGuard is a **Chrome Extension** that runs inside the browser and monitors user activity.
+
+---
+
+### 1. Focus Mode
+
+User can enable Focus Mode.
+
+When enabled:
+- distracting websites are restricted  
+- user stays in a controlled environment  
+
+---
+
+### 2. Smart Blocking Screen
+
+Instead of a blank block page, I created a UI that shows:
+
+- session information  
+- focus status  
+- options like “Take a break”  
+
+This makes the experience better and less frustrating.
+
+---
+
+### 3. Behavior Tracking
+
+The extension tracks:
+
+- time spent on websites  
+- frequency of visits  
+- repeated switching between sites  
+
+This helps understand how the user is behaving.
+
+---
+
+### 4. Adaptive Logic
+
+If the user keeps switching between distracting websites:
+
+- the system detects the pattern  
+- shows a message or reminder  
+
+This is more intelligent than simple blocking.
+
+---
+
+### 5. Break System
+
+Users can take controlled breaks:
+
+- allow access for limited time  
+- automatically return to focus mode  
+
+This keeps balance between work and relaxation.
+
+---
+
+## Challenges
+
+### 1. Real-time tracking
+
+The extension runs continuously, so:
+
+- it must be efficient  
+- it must not slow down the browser  
+
+---
+
+### 2. Balancing restriction and freedom
+
+Too much blocking → frustrating  
+Too little control → useless  
+
+So I had to design a system that feels natural.
+
+---
+
+### 3. State management
+
+Tracking user behavior across tabs required:
+
+- proper storage  
+- clean state handling  
+- event-based updates  
+
+---
+
+## What I Learned
+
+This project helped me understand:
+
+- browser event systems  
+- user behavior patterns  
+- designing user-friendly restrictions  
+- building real-time systems inside browser  
+
+---
+
+## Final Result
+
+FocusGuard is not just a blocker.
+
+It is a system that:
+
+- tracks behavior  
+- gives feedback  
+- helps users stay consistent  
+
+---
+
+## Conclusion
+
+This project changed how I think about productivity tools.
+
+Instead of forcing users,  
+it supports them.
+
+And that makes a big difference.

@@ -1,0 +1,78 @@
+---
+title: "FocusGuard – Adaptive Distraction Control Chrome Extension"
+publishedAt: "2026-04-14"
+summary: "A behavior-aware Chrome extension that helps users reduce distractions through smart website control, activity tracking, and real-time focus feedback."
+images:
+  - "/images/projects/focusguard/cover.png"
+  - "/images/projects/focusguard/screenshot-1.png"
+  - "/images/projects/focusguard/screenshot-2.png"
+  - "/images/projects/focusguard/screenshot-3.png"
+team:
+  - name: "Deepak Keer"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/deepak-keer-1276a4361/"
+link: "https://github.com/Deepu-Builds/FocusGuard"
+---
+
+## Overview
+
+FocusGuard is a Chrome Extension designed to help users improve focus by reducing digital distractions. Instead of simply blocking websites, it introduces a behavior-aware system that monitors user activity patterns and responds intelligently.
+
+The goal was to build a lightweight, browser-native productivity system that operates in real time without external dependencies. FocusGuard integrates directly into the browsing experience and provides structured control over distracting websites while offering actionable feedback.
+
+---
+
+## Key Features
+
+- **Focus Mode System**  
+  Enables users to activate a dedicated focus state where predefined distracting websites (such as YouTube or social media platforms) are temporarily restricted.
+
+- **Smart Blocking Interface**  
+  Instead of showing a blank page, users are presented with a structured interface displaying session data, motivational feedback, and controlled options like taking a break.
+
+- **Behavior Tracking**  
+  Tracks metrics such as time spent on websites, visit frequency, and session patterns to provide awareness and insights into user behavior.
+
+- **Adaptive Detection Logic**  
+  Detects repetitive distraction patterns (e.g., frequent site switching) and triggers real-time prompts encouraging users to return to work.
+
+- **Break Management System**  
+  Allows controlled access through timed breaks using browser-based scheduling, automatically restoring focus mode after the break ends.
+
+- **Lightweight Architecture**  
+  Designed to run entirely within the browser using Chrome APIs without relying on external services.
+
+---
+
+## Technologies Used
+
+- **Chrome Extension (Manifest V3)**  
+  Enables integration with browser tabs, events, and background processes.
+
+- **JavaScript (Event-driven architecture)**  
+  Used to handle real-time tracking, state management, and interaction logic.
+
+- **Chrome APIs**  
+  - `tabs` for monitoring navigation  
+  - `storage` for persisting user data  
+  - `alarms` for managing timed sessions  
+  - `runtime` for communication between scripts  
+
+---
+
+## Challenges and Learnings
+
+One of the main challenges was accurately tracking user behavior without introducing performance overhead. Since the extension operates continuously in the browser, it required efficient event handling and optimized state updates.
+
+Another challenge was designing a system that balances restriction and usability. Instead of aggressively blocking access, the system needed to provide controlled flexibility through features like break management and user prompts.
+
+This project improved my understanding of browser-based system design, event-driven programming, and building user-focused productivity tools.
+
+---
+
+## Outcome
+
+FocusGuard demonstrates how browser-native systems can be used to influence user behavior in a practical way. By combining tracking, control, and feedback, it goes beyond simple blocking tools and provides a structured approach to maintaining focus.
+
+The project highlights the ability to design systems that operate in real time, integrate deeply with the browser environment, and deliver meaningful user impact.

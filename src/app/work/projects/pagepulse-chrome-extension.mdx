@@ -1,0 +1,94 @@
+---
+title: "PagePulse – Browser-Based Developer Inspection and Debugging System"
+publishedAt: "2026-04-14"
+summary: "A browser-native developer tool that provides real-time error tracking, DOM inspection, performance insights, and accessibility analysis without relying on external APIs."
+images:
+  - "/images/projects/pagepulse/cover.png"
+  - "/images/projects/pagepulse/inspector.png"
+team:
+  - name: "Deepak Keer"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/deepak-keer-1276a4361/"
+link: "https://github.com/Deepu-Builds/PagePulse"
+---
+
+## Overview
+
+PagePulse is a browser-based developer tool built as a Chrome Extension to simplify debugging and analysis workflows directly inside the browser.
+
+Modern development often requires switching between multiple tools such as DevTools, console, performance panels, and accessibility checkers. This leads to fragmented workflows and reduced efficiency.
+
+PagePulse addresses this by consolidating essential developer capabilities into a single interface. It captures runtime data from web pages, processes it in real time, and presents structured insights through a side panel—without relying on external APIs.
+
+---
+
+## Key Features
+
+- **Real-Time Error Tracking**  
+  Captures JavaScript runtime errors and unhandled promise rejections using global event listeners. Errors are structured and sent to the extension for analysis and display.
+
+- **Interactive DOM Inspection**  
+  Enables element-level inspection with a visual overlay system. Users can hover and select elements to extract structured data such as styles, layout dimensions, attributes, and hierarchy.
+
+- **Computed Style Extraction**  
+  Uses the browser’s CSSOM APIs to retrieve computed styles and present them in a readable format, helping developers understand how elements are rendered.
+
+- **Performance Insights**  
+  Leverages the Performance API to extract metrics such as page load time, Time to First Byte (TTFB), and resource loading behavior.
+
+- **Accessibility Analysis**  
+  Performs rule-based accessibility checks, including:
+  - Missing alt attributes
+  - Missing form labels
+  - Incorrect heading hierarchy
+  - Low color contrast
+
+- **Lightweight Architecture**  
+  Designed to run entirely within the browser without external APIs, ensuring fast performance, reliability, and privacy.
+
+---
+
+## Technologies Used
+
+- **Chrome Extension (Manifest V3)**  
+  Core platform enabling browser-level integration and event handling.
+
+- **JavaScript (ES Modules)**  
+  Used for building modular and maintainable logic across content scripts and background processes.
+
+- **Chrome APIs**  
+  - `runtime` for messaging  
+  - `tabs` for tab-level control  
+  - `storage` for state persistence  
+  - `sidePanel` for UI rendering  
+
+- **DOM & CSSOM APIs**  
+  For element inspection, attribute extraction, and computed style analysis.
+
+- **Performance API**  
+  For capturing navigation and resource timing data.
+
+---
+
+## Challenges and Learnings
+
+One of the key challenges was designing a system that could operate reliably within the constraints of browser environments.
+
+Handling real-time events such as errors and DOM interactions required careful management of listeners to avoid duplication and performance issues. Additionally, extracting meaningful data from raw DOM structures required building structured processing logic rather than relying on external services.
+
+Another challenge was maintaining a balance between functionality and performance. Since the tool runs directly in the browser, it was important to keep it lightweight and responsive.
+
+This project strengthened my understanding of browser internals, event-driven architecture, and system design within constrained environments.
+
+---
+
+## Outcome
+
+PagePulse provides a unified interface for debugging, inspection, and analysis, reducing the need to switch between multiple tools.
+
+The system demonstrates how browser-native capabilities can be leveraged to build efficient developer tools without external dependencies. It serves as a strong foundation for building more advanced productivity systems for developers.
+
+---
+
+This project highlights the ability to design and implement real-world systems that operate at the browser level, focusing on performance, usability, and practical problem solving.

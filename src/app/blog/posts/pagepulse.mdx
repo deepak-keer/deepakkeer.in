@@ -1,0 +1,187 @@
+---
+title: "How I Built PagePulse – A Browser-Based Debugging Tool"
+summary: "A practical breakdown of building a Chrome extension that helps developers inspect elements, track errors, and analyze performance directly inside the browser."
+publishedAt: "2026-04-14"
+tag: "Engineering"
+---
+
+## Introduction
+
+While building frontend projects, I noticed one common problem.
+
+Debugging is not simple.
+
+We open DevTools, check console, inspect elements, look at performance…  
+and keep switching between different tabs again and again.
+
+This breaks focus and slows down development.
+
+So I decided to build something better.
+
+---
+
+## The Problem
+
+Modern frontend debugging is powerful, but not efficient.
+
+Developers use:
+- Console for errors  
+- Elements panel for inspection  
+- Performance tab for metrics  
+- Lighthouse for accessibility  
+
+Everything is separated.
+
+There is no single place where we can quickly understand what is happening on the page.
+
+---
+
+## The Idea
+
+I wanted to build a tool that works **directly inside the browser** and gives:
+
+- error tracking  
+- element inspection  
+- accessibility checks  
+- performance insights  
+
+All in one place.
+
+That’s how **PagePulse** started.
+
+---
+
+## How It Works
+
+PagePulse is a **Chrome Extension**.
+
+It injects scripts into the webpage and listens to browser events in real time.
+
+### 1. Error Tracking
+
+I used global event listeners:
+
+- `window.onerror`
+- `unhandledrejection`
+
+These capture runtime errors and send them to the extension.
+
+---
+
+### 2. DOM Inspection
+
+I built an inspector system where:
+
+- user moves cursor  
+- element gets highlighted  
+- click → data is captured  
+
+Extracted data includes:
+- tag name  
+- class / id  
+- dimensions  
+- styles  
+- attributes  
+
+---
+
+### 3. Style Extraction
+
+Using the browser’s **CSSOM API**, I collected:
+
+- font  
+- color  
+- spacing  
+- layout properties  
+
+This helps understand how the UI is actually rendered.
+
+---
+
+### 4. Accessibility Checks
+
+I added simple but useful checks:
+
+- missing `alt` attributes  
+- missing labels  
+- heading order issues  
+- color contrast problems  
+
+---
+
+### 5. Performance Data
+
+Using the **Performance API**, I collected:
+
+- page load time  
+- resource timing  
+- basic performance insights  
+
+---
+
+## Challenges
+
+One of the biggest challenges was:
+
+### 1. Running inside browser safely
+
+The extension runs on every page, so:
+- it must be lightweight  
+- it must not break the website  
+
+---
+
+### 2. Managing events
+
+Too many listeners can slow things down.
+
+So I had to:
+- control when features are active  
+- remove listeners properly  
+
+---
+
+### 3. Data structure
+
+Raw DOM data is messy.
+
+I had to convert it into:
+- clean  
+- readable  
+- structured format  
+
+---
+
+## What I Learned
+
+This project helped me understand:
+
+- how browsers actually work  
+- how extensions communicate (content script ↔ background)  
+- event-driven architecture  
+- working without backend or APIs  
+
+---
+
+## Final Result
+
+PagePulse became a tool that:
+
+- reduces context switching  
+- improves debugging speed  
+- gives structured insights  
+
+All inside the browser.
+
+---
+
+## Conclusion
+
+This project is not just about features.
+
+It’s about solving a real problem developers face every day.
+
+Instead of adding more tools,  
+I tried to make the workflow simpler.
+
+And that’s what good engineering is about.
