@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.deepakkeer.in
+
+# Sitemaps
+Sitemap: https://www.deepakkeer.in/sitemap.xml
